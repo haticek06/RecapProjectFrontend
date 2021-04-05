@@ -1,12 +1,25 @@
-<h4>ARAÇ LİSTESİ</h4>
+
 <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
+<app-filter></app-filter>
+
+<br/>
+<div class="mb-3">
+
+  <label for="carFilter" class="form-label" >Araç Ara</label>
+
+  <input type="text" [(ngModel)]="carFilter" class="form-control" id="carFilter" 
+  placeholder="Arama İfadesi Giriniz">
+</div>
+<div *ngIf="carFilter" class="alert alert-primary">
+  {{carFilter}} aradınız
+</div>
 <div class="row" *ngIf="dataLoaded==true">
-  <div *ngFor="let car of cars" class="card" style="width:260px; margin:5px;">
+  <div *ngFor="let car of cars |carFilter:carFilter" class="card" style="width:260px; margin:5px;">
     <img src="{{imageBasePath}}{{car.imagePath}}" class="card-img-top" alt="{{car.description}} Image" width="auto" height="auto">
     <div  class="card-body">
-      <h5 class="card-title">{{car.description}}</h5>
+      <h5 class="card-title">{{car.carName}} - {{car.description}}</h5>
     </div >
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Marka: {{car.brandName}}</li>
@@ -19,7 +32,7 @@
         <button routerLink="/car/details/{{car.id}}" type="button" class="btn btn-primary">Detaylar</button>
       </section>
       <section style="float: right">
-        <button type="button" class="btn btn-primary">Kirala</button>
+        <app-rental [car]="car"></app-rental>
       </section>
     </div>
   </div>
