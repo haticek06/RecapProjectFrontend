@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,15 @@ import { ToastrModule } from "ngx-toastr";
 import { FilterComponent } from './components/filter/filter.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { BrandAddComponent } from './components/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/color-add/color-add.component';
+import { CarAddComponent } from './components/car-add/car-add.component';
+import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
+import { ColorUpdateComponent } from './components/color-update/color-update.component';
+import { CarUpdateComponent } from './components/car-update/car-update.component';
+import { CarListComponent } from './components/car-list/car-list.component';
+import { ColorListComponent } from './components/color-list/color-list.component';
+import { BrandListComponent } from './components/brand-list/brand-list.component';
+
 
 
 @NgModule({
@@ -42,13 +51,21 @@ import { BrandAddComponent } from './components/brand-add/brand-add.component';
     ColorFilterPipe,
     FilterComponent,
     PaymentComponent,
-    BrandAddComponent
+    BrandAddComponent,
+    ColorAddComponent,
+    CarAddComponent,
+    BrandUpdateComponent,
+    ColorUpdateComponent,
+    CarUpdateComponent,
+    CarListComponent,
+    ColorListComponent,
+    BrandListComponent,
   ],
-  imports: [
+  imports: [   
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,     
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
