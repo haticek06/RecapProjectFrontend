@@ -31,6 +31,10 @@ import { CarUpdateComponent } from './components/car-update/car-update.component
 import { CarListComponent } from './components/car-list/car-list.component';
 import { ColorListComponent } from './components/color-list/color-list.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { NaviAuthComponent } from './components/navi-auth/navi-auth.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -60,6 +64,10 @@ import { BrandListComponent } from './components/brand-list/brand-list.component
     CarListComponent,
     ColorListComponent,
     BrandListComponent,
+    LoginComponent,
+    RegisterComponent,
+    NaviAuthComponent,
+    ProfileComponent
   ],
   imports: [   
     BrowserModule,

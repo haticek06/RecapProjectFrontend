@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDto } from 'src/app/models/userDto';
+import { AuthService } from 'src/app/services/auth.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-navi',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NaviComponent implements OnInit {
 
-  constructor() { }
+  name:UserDto;
+  authControl:boolean=false;
+
+  constructor(private authService: AuthService,private localStorageService:LocalStorageService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -13,6 +13,7 @@
             <th> Model Yılı</th>
             <th> Günlük Fiyat </th>
             <th> Açıklama  </th>
+            <th> Findeks Puanı  </th>
             <th> Ekle Güncelle Sil  </th>
         </tr>
     </thead>
@@ -24,6 +25,7 @@
             <td>{{car.modelYear}}</td>
             <td>{{car.dailyPrice}}</td>
             <td>{{car.description}}</td>
+            <td>{{car.findexScore}}</td>
             <td>
                 <button style="margin-left: 5px;" class="btn btn-outline-success" routerLink="/car/add">Ekle</button>
                 <button class="btn btn-outline-primary" routerLink="/car/update/{{car.id}}">Güncelle</button>
